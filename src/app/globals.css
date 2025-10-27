@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand colors */
+  --rt-color-primary-500: #e31b23;
+  --rt-color-primary-600: #c0171e;
+  --rt-color-primary-700: #921117;
+  --rt-color-neutral-50: #f9fafb;
+  --rt-color-neutral-100: #f3f4f6;
+  --rt-color-neutral-200: #e5e7eb;
+  --rt-color-neutral-400: #9ca3af;
+  --rt-color-neutral-600: #4b5563;
+  --rt-color-neutral-800: #1f2933;
+  --rt-color-neutral-900: #111111;
+  --rt-color-surface: #ffffff;
+  --rt-color-surface-alt: #f9fafb;
+  --rt-color-success-500: #0e9f6e;
+  --rt-color-warning-500: #d97706;
+  --rt-color-info-500: #2563eb;
+  --rt-color-overlay: rgba(17, 17, 17, 0.64);
+
+  /* Typography */
+  --rt-font-heading: "Manrope", "Inter", "Segoe UI", Arial, sans-serif;
+  --rt-font-body: "Inter", "Segoe UI", Arial, sans-serif;
+  --rt-font-script: "Playfair Display", "Georgia", serif;
+
+  /* Spacing */
+  --rt-space-xxs: 4px;
+  --rt-space-xs: 8px;
+  --rt-space-sm: 12px;
+  --rt-space-md: 16px;
+  --rt-space-lg: 24px;
+  --rt-space-xl: 32px;
+  --rt-space-2xl: 48px;
+  --rt-space-3xl: 64px;
+  --rt-space-4xl: 96px;
+
+  /* Radii */
+  --rt-radius-sm: 6px;
+  --rt-radius-md: 12px;
+  --rt-radius-lg: 20px;
+  --rt-radius-pill: 999px;
+
+  /* Shadows */
+  --rt-shadow-xs: 0 1px 2px rgba(17, 17, 17, 0.08);
+  --rt-shadow-sm: 0 4px 12px rgba(17, 17, 17, 0.12);
+  --rt-shadow-md: 0 10px 24px rgba(17, 17, 17, 0.16);
+  --rt-shadow-lg: 0 18px 40px rgba(17, 17, 17, 0.18);
+  --rt-shadow-focus: 0 0 0 3px rgba(227, 27, 35, 0.32);
+
+  /* Gradients */
+  --rt-gradient-hero: linear-gradient(
+    135deg,
+    rgba(17, 17, 17, 0.78) 0%,
+    rgba(17, 17, 17, 0.4) 55%,
+    rgba(227, 27, 35, 0.6) 100%
+  );
+  --rt-gradient-cta: linear-gradient(135deg, #e31b23 0%, #921117 100%);
+
+  /* Layout */
+  --rt-max-width: 1200px;
+  --rt-section-padding-y: 64px;
+  --rt-section-padding-y-mobile: 40px;
+}
+
+@theme inline {
+  --font-heading: var(--rt-font-heading);
+  --font-body: var(--rt-font-body);
+  --font-script: var(--rt-font-script);
+
+  --color-primary-500: var(--rt-color-primary-500);
+  --color-primary-600: var(--rt-color-primary-600);
+  --color-primary-700: var(--rt-color-primary-700);
+  --color-neutral-50: var(--rt-color-neutral-50);
+  --color-neutral-100: var(--rt-color-neutral-100);
+  --color-neutral-200: var(--rt-color-neutral-200);
+  --color-neutral-400: var(--rt-color-neutral-400);
+  --color-neutral-600: var(--rt-color-neutral-600);
+  --color-neutral-800: var(--rt-color-neutral-800);
+  --color-neutral-900: var(--rt-color-neutral-900);
+  --color-surface: var(--rt-color-surface);
+  --color-surface-alt: var(--rt-color-surface-alt);
+  --color-success-500: var(--rt-color-success-500);
+  --color-warning-500: var(--rt-color-warning-500);
+  --color-info-500: var(--rt-color-info-500);
+  --color-overlay: var(--rt-color-overlay);
+
+  --radius-sm: var(--rt-radius-sm);
+  --radius-md: var(--rt-radius-md);
+  --radius-lg: var(--rt-radius-lg);
+  --radius-pill: var(--rt-radius-pill);
+
+  --shadow-xs: var(--rt-shadow-xs);
+  --shadow-sm: var(--rt-shadow-sm);
+  --shadow-md: var(--rt-shadow-md);
+  --shadow-lg: var(--rt-shadow-lg);
+  --shadow-focus: var(--rt-shadow-focus);
+
+  --spacing-xxs: var(--rt-space-xxs);
+  --spacing-xs: var(--rt-space-xs);
+  --spacing-sm: var(--rt-space-sm);
+  --spacing-md: var(--rt-space-md);
+  --spacing-lg: var(--rt-space-lg);
+  --spacing-xl: var(--rt-space-xl);
+  --spacing-2xl: var(--rt-space-2xl);
+  --spacing-3xl: var(--rt-space-3xl);
+  --spacing-4xl: var(--rt-space-4xl);
+
+  --gradient-hero: var(--rt-gradient-hero);
+  --gradient-cta: var(--rt-gradient-cta);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--rt-color-surface);
+  color: var(--rt-color-neutral-800);
+  font-family: var(--rt-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-script {
+  font-family: var(--rt-font-script);
+}
+
+.font-heading {
+  font-family: var(--rt-font-heading);
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.rt-container {
+  width: min(100%, var(--rt-max-width));
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 6vw, 3rem);
+}
+
+.rt-section {
+  padding-block: var(--rt-section-padding-y);
+}
+
+@media (max-width: 767px) {
+  .rt-section {
+    padding-block: var(--rt-section-padding-y-mobile);
+  }
+}
