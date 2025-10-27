@@ -25,9 +25,9 @@ export default function Home() {
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-neutral-900/85 via-neutral-900/70 to-neutral-900/60" />
         <Container className="grid min-h-[520px] content-center gap-8 py-24 text-white md:grid-cols-12">
-          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7 xl:col-span-6">
+          <div className="w-full space-y-6 md:col-span-10 lg:col-span-10 xl:col-span-9">
           
-            <h1 className="text-4xl font-extrabold leading-[1.1] text-balance md:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-extrabold leading-[1.1] text-balance md:text-4xl lg:text-5xl">
               Engineering, construction, and project management delivered with a specific solution.
             </h1>
             <p className="max-w-[68ch] break-normal text-lg text-neutral-100/90 md:max-w-[72ch]">

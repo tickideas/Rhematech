@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="flex flex-col">
-      <section className="rt-section bg-neutral-900 text-white">
-        <Container className="grid gap-6 md:grid-cols-12">
-          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7 xl:col-span-6">
+      <section className="relative isolate overflow-hidden bg-neutral-900 text-white">
+        <Container className="grid min-h-[360px] content-center gap-6 py-24 md:grid-cols-12">
+          <div className="w-full space-y-6 md:col-span-10 lg:col-span-10 xl:col-span-9">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
               Services
             </p>
