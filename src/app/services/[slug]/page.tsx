@@ -57,7 +57,7 @@ export default async function ServiceDetail({ params }: Props) {
                 </span>
               ))}
             </div>
-            <Button href="/contact" variant="ghost" className="border border-white text-white hover:bg-white/10">
+            <Button href="/contact" variant="red">
               Request proposal
             </Button>
           </div>

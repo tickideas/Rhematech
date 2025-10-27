@@ -4,7 +4,7 @@ import Link, { LinkProps } from "next/link";
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "red";
 
 type BaseProps = {
   variant?: ButtonVariant;
@@ -34,6 +34,8 @@ const variants: Record<ButtonVariant, string> = {
     "border border-[var(--rt-color-primary-500)] text-[var(--rt-color-primary-500)] hover:bg-[rgba(227,27,35,0.08)]",
   ghost:
     "text-[var(--rt-color-primary-500)] hover:bg-[rgba(227,27,35,0.12)]",
+    red:
+      "bg-[#E31B23] hover:bg-[#b80f18] text-white border border-[#E31B23] shadow-[var(--rt-shadow-sm)]",
 };
 
 function getButtonClasses({ variant = "primary", className }: ButtonProps) {

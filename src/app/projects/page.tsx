@@ -110,7 +110,7 @@ export default function ProjectsPage() {
                   We help teams define scope, budget, and timeline with clarity before the first shovel hits the ground.
                 </p>
               </div>
-              <Button href="/contact" variant="ghost" className="border border-white text-white hover:bg-white/10">
+              <Button href="/contact" variant="red">
                 Request a consultation
               </Button>
             </div>
