@@ -40,25 +40,27 @@ export default async function ServiceDetail({ params }: Props) {
   return (
     <div className="flex flex-col">
       <section className="rt-section bg-neutral-900 text-white">
-        <Container className="space-y-6">
-          <span className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-            Service Detail
-          </span>
-          <h1 className="text-4xl font-semibold md:text-5xl">{service.name}</h1>
-          <p className="max-w-3xl text-lg text-white/80">{service.summary}</p>
-          <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-white/60">
-            {service.deliverables.map((deliverable) => (
-              <span
-                key={deliverable}
-                className="rounded-full border border-white/30 px-4 py-2"
-              >
-                {deliverable}
-              </span>
-            ))}
+        <Container className="grid gap-6 md:grid-cols-12">
+          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7">
+            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+              Service Detail
+            </span>
+            <h1 className="text-4xl font-semibold text-balance md:text-5xl">{service.name}</h1>
+            <p className="max-w-[68ch] break-normal text-lg text-white/80 md:max-w-[72ch]">{service.summary}</p>
+            <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.3em] text-white/60">
+              {service.deliverables.map((deliverable) => (
+                <span
+                  key={deliverable}
+                  className="rounded-full border border-white/30 px-4 py-2"
+                >
+                  {deliverable}
+                </span>
+              ))}
+            </div>
+            <Button href="/contact" variant="ghost" className="border border-white text-white hover:bg-white/10">
+              Request proposal
+            </Button>
           </div>
-          <Button href="/contact" variant="ghost" className="border border-white text-white hover:bg-white/10">
-            Request proposal
-          </Button>
         </Container>
       </section>
 

@@ -50,16 +50,18 @@ export default function AboutPage() {
           className="-z-10 object-cover opacity-30"
         />
         <div className="absolute inset-0 -z-10 bg-neutral-900/70" />
-        <Container className="flex min-h-[360px] flex-col justify-center gap-6 py-24">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-            About Rhematech
-          </p>
-          <h1 className="text-4xl font-semibold md:text-5xl">
-            Global multidisciplinary experts delivering with a specific solution.
-          </h1>
-          <p className="max-w-2xl text-lg text-white/80">
-            Rhematech Projects Limited is a global engineering, construction, project management, and procurement company delivering complex infrastructure across transportation, energy, defense, and civic sectors.
-          </p>
+        <Container className="grid min-h-[360px] content-center gap-6 py-24 md:grid-cols-12">
+          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7 xl:col-span-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+              About Rhematech
+            </p>
+            <h1 className="text-4xl font-semibold text-balance md:text-5xl">
+              Global multidisciplinary experts delivering with a specific solution.
+            </h1>
+            <p className="max-w-[68ch] break-normal text-lg text-white/80 md:max-w-[72ch]">
+              Rhematech Projects Limited is a global engineering, construction, project management, and procurement company delivering complex infrastructure across transportation, energy, defense, and civic sectors.
+            </p>
+          </div>
         </Container>
       </section>
 

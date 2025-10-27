@@ -13,19 +13,21 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col">
       <section className="rt-section bg-neutral-900 text-white">
-        <Container className="space-y-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-            Services
-          </p>
-          <h1 className="text-4xl font-semibold md:text-5xl">
-            Specific solutions across every stage of the asset lifecycle.
-          </h1>
-          <p className="max-w-3xl text-lg text-white/80">
-            From feasibility to commissioning, we deploy multidisciplinary teams that bring clarity, control, and confidence to complex engineering and construction programmes.
-          </p>
-          <Button href="/contact" variant="ghost" className="border border-white text-white hover:bg-white/10">
-            Discuss your project
-          </Button>
+        <Container className="grid gap-6 md:grid-cols-12">
+          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7 xl:col-span-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+              Services
+            </p>
+            <h1 className="text-4xl font-semibold text-balance md:text-5xl">
+              Specific solutions across every stage of the asset lifecycle.
+            </h1>
+            <p className="max-w-[68ch] break-normal text-lg text-white/80 md:max-w-[72ch]">
+              From feasibility to commissioning, we deploy multidisciplinary teams that bring clarity, control, and confidence to complex engineering and construction programmes.
+            </p>
+            <Button href="/contact" variant="ghost" className="border border-white text-white hover:bg-white/10">
+              Discuss your project
+            </Button>
+          </div>
         </Container>
       </section>
 
@@ -112,23 +114,6 @@ export default function ServicesPage() {
               </article>
             ))}
           </div>
-        </Container>
-      </section>
-
-      <section className="rt-section">
-        <Container className="flex flex-col gap-6 rounded-[var(--rt-radius-lg)] bg-[var(--rt-gradient-cta)] p-10 text-white shadow-[var(--rt-shadow-md)] md:flex-row md:items-center md:justify-between">
-          <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-              Partner with Rhematech
-            </p>
-            <h2 className="text-3xl font-semibold">Let’s architect your next project.</h2>
-            <p className="max-w-xl text-sm text-white/80">
-              Share your scope and we’ll assemble a dedicated team to craft a delivery plan that de-risks complexity and accelerates outcomes.
-            </p>
-          </div>
-          <Button href="/contact" className="bg-white text-neutral-900 hover:bg-neutral-100">
-            Start a conversation
-          </Button>
         </Container>
       </section>
     </div>

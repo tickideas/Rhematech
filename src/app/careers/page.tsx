@@ -46,16 +46,18 @@ export default function CareersPage() {
   return (
     <div className="flex flex-col">
       <section className="rt-section bg-neutral-900 text-white">
-        <Container className="space-y-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-            Careers
-          </p>
-          <h1 className="text-4xl font-semibold md:text-5xl">
-            Build a career where projects change skylines and communities.
-          </h1>
-          <p className="max-w-3xl text-lg text-white/80">
-            We are engineers, project managers, and innovators driven by purpose. Join a team that tackles complex infrastructure challenges with integrity, creativity, and courage.
-          </p>
+        <Container className="grid gap-6 md:grid-cols-12">
+          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7 xl:col-span-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+              Careers
+            </p>
+            <h1 className="text-4xl font-semibold text-balance md:text-5xl">
+              Build a career where projects change skylines and communities.
+            </h1>
+            <p className="max-w-[68ch] break-normal text-lg text-white/80 md:max-w-[72ch]">
+              We are engineers, project managers, and innovators driven by purpose. Join a team that tackles complex infrastructure challenges with integrity, creativity, and courage.
+            </p>
+          </div>
         </Container>
       </section>
 
@@ -116,9 +118,9 @@ export default function CareersPage() {
 
       <section id="application" className="rt-section bg-neutral-50">
         <Container className="space-y-6">
-          <h2 className="text-3xl font-semibold text-neutral-900">Submit your profile</h2>
-          <p className="max-w-2xl text-neutral-600">
-            Share your details and portfolio. Our talent team reviews every application and reaches out when there’s a strong alignment.
+          <h2 className="text-3xl font-semibold text-neutral-900 text-balance">Submit your profile</h2>
+          <p className="max-w-[65ch] break-normal text-neutral-600">
+            Share your details and portfolio. Our talent team reviews every application and reaches out when there&apos;s a strong alignment.
           </p>
           <CareersForm />
         </Container>

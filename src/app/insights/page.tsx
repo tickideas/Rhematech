@@ -33,16 +33,18 @@ export default function InsightsPage() {
   return (
     <div className="flex flex-col">
       <section className="rt-section bg-neutral-900 text-white">
-        <Container className="space-y-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-            Insights
-          </p>
-          <h1 className="text-4xl font-semibold md:text-5xl">
-            News, insights, and perspectives from the field.
-          </h1>
-          <p className="max-w-3xl text-lg text-white/80">
-            Stay informed on the strategies, tools, and stories shaping global infrastructure delivery.
-          </p>
+        <Container className="grid gap-6 md:grid-cols-12">
+          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7 xl:col-span-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+              Insights
+            </p>
+            <h1 className="text-4xl font-semibold text-balance md:text-5xl">
+              News, insights, and perspectives from the field.
+            </h1>
+            <p className="max-w-[68ch] break-normal text-lg text-white/80 md:max-w-[72ch]">
+              Stay informed on the strategies, tools, and stories shaping global infrastructure delivery.
+            </p>
+          </div>
         </Container>
       </section>
 

@@ -18,43 +18,38 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 bg-surface/90 backdrop-blur">
-      <Container className="flex h-20 items-center justify-between gap-6">
+      <Container className="flex h-20 items-center gap-6 justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/brand/rhematech-full.png"
               alt="Rhematech Projects Limited"
-              width={180}
-              height={52}
+              width={270}
+              height={60}
               priority
             />
           </Link>
-          <nav className="hidden items-center gap-4 text-sm font-medium lg:flex">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "relative px-3 py-2 transition-colors",
-                  isActive(item.href)
-                    ? "text-[var(--rt-color-primary-500)]"
-                    : "text-neutral-600 hover:text-neutral-900",
-                )}
-              >
-                {item.label}
-                {isActive(item.href) && (
-                  <span className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-[var(--rt-color-primary-500)]" />
-                )}
-              </Link>
-            ))}
-          </nav>
         </div>
-        <div className="hidden items-center gap-3 lg:flex">
-          <Button href="/projects" variant="ghost">
-            View Projects
-          </Button>
-          <Button href="/contact">Request a Quote</Button>
-        </div>
+        <nav className="hidden items-center gap-4 text-sm font-medium lg:flex ml-auto">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "relative px-3 py-2 transition-colors",
+                isActive(item.href)
+                  ? "text-[var(--rt-color-primary-500)]"
+                  : "text-neutral-600 hover:text-neutral-900",
+              )}
+            >
+              {item.label}
+              {isActive(item.href) && (
+                <span className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-[var(--rt-color-primary-500)]" />
+              )}
+            </Link>
+          ))}
+        </nav>
+       
         <button
           type="button"
           className="inline-flex items-center justify-center rounded-full border border-neutral-200 p-2 lg:hidden"
@@ -119,14 +114,6 @@ export function Header() {
                 </div>
               ))}
             </nav>
-            <div className="mt-auto flex flex-col gap-3">
-              <Button href="/projects" variant="ghost" onClick={() => setIsMobileOpen(false)}>
-                View Projects
-              </Button>
-              <Button href="/contact" onClick={() => setIsMobileOpen(false)}>
-                Request a Quote
-              </Button>
-            </div>
           </div>
         </div>
       )}

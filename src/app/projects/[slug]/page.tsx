@@ -46,8 +46,8 @@ export default function ProjectDetail({ params }: Props) {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
               Case Study
             </p>
-            <h1 className="text-4xl font-semibold md:text-5xl">{project.title}</h1>
-            <p className="max-w-2xl text-lg text-white/80">{project.summary}</p>
+            <h1 className="text-4xl font-semibold text-balance md:text-5xl">{project.title}</h1>
+            <p className="max-w-[68ch] break-normal text-lg text-white/80">{project.summary}</p>
           </div>
           <div className="rounded-[var(--rt-radius-lg)] bg-white/10 p-6 text-sm">
             <dl className="grid gap-2 text-white/80">

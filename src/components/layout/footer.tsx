@@ -6,22 +6,20 @@ const quickLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
-  { label: "Capabilities", href: "/capabilities" },
-  { label: "Careers", href: "/careers" },
+  // { label: "Capabilities", href: "/capabilities" },
+  // { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
 export function Footer() {
   return (
     <footer className="border-t border-neutral-200 bg-neutral-50">
-      <Container className="grid gap-10 py-16 md:grid-cols-[2fr_1fr_1fr]">
-        <div className="max-w-xl space-y-4">
+      <Container className="grid gap-10 py-16 md:grid-cols-12">
+        {/* Brand + summary + contact */}
+        <div className="space-y-4 md:col-span-6 lg:col-span-7">
           <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-neutral-500">
             Rhematech Projects Limited
           </h3>
-          <p className="text-lg font-semibold text-neutral-900">
-            Engineering, construction, and project management delivered with a specific solution.
-          </p>
           <div className="space-y-1 text-sm text-neutral-600">
             {contactInfo.addressLines.map((line) => (
               <p key={line}>{line}</p>
@@ -34,7 +32,8 @@ export function Footer() {
             </p>
           </div>
         </div>
-        <div>
+        {/* Quick Links */}
+        <div className="md:col-span-3 lg:col-span-2">
           <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-neutral-500">
             Quick Links
           </h4>
@@ -48,7 +47,8 @@ export function Footer() {
             ))}
           </ul>
         </div>
-        <div>
+        {/* Services */}
+        <div className="md:col-span-3 lg:col-span-3">
           <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-neutral-500">
             Services
           </h4>

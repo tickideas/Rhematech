@@ -31,8 +31,8 @@ export const navItems: NavItem[] = [
       { label: "Case Studies", href: "/projects#case-studies" },
     ],
   },
-  { label: "Capabilities", href: "/capabilities" },
-  { label: "Careers", href: "/careers" },
+  // { label: "Capabilities", href: "/capabilities" },
+  // { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -395,7 +395,7 @@ export const testimonial = {
 
 export const contactInfo = {
   addressLines: [
-    "Office No. 44 Port Harcourt Aba Express Road",
+    "No. 44 Port Harcourt Aba Express Road",
     "P.O.Box 4852, Port Harcourt",
     "Rivers State, Nigeria",
   ],

@@ -27,16 +27,18 @@ export default function CapabilitiesPage() {
   return (
     <div className="flex flex-col">
       <section className="rt-section bg-neutral-900 text-white">
-        <Container className="space-y-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-            Capabilities
-          </p>
-          <h1 className="text-4xl font-semibold md:text-5xl">
-            Integrated capabilities that keep complex projects on track.
-          </h1>
-          <p className="max-w-3xl text-lg text-white/80">
-            Rhematech mobilises engineering depth, project controls, procurement networks, and safety leadership into one cohesive delivery powerhouse.
-          </p>
+        <Container className="grid gap-6 md:grid-cols-12">
+          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7 xl:col-span-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+              Capabilities
+            </p>
+            <h1 className="text-4xl font-semibold text-balance md:text-5xl">
+              Integrated capabilities that keep complex projects on track.
+            </h1>
+            <p className="max-w-[68ch] break-normal text-lg text-white/80 md:max-w-[72ch]">
+              Rhematech mobilises engineering depth, project controls, procurement networks, and safety leadership into one cohesive delivery powerhouse.
+            </p>
+          </div>
         </Container>
       </section>
 
@@ -78,9 +80,9 @@ export default function CapabilitiesPage() {
 
       <section className="rt-section bg-neutral-50">
         <Container className="space-y-6">
-          <h2 className="text-3xl font-semibold text-neutral-900">Quality & HSE</h2>
-          <p className="max-w-3xl text-neutral-600">
-            Quality assurance and health, safety, and environment (HSE) excellence are embedded from tender to handover. Our teams have been certified by some of the world’s most demanding clients, maintaining zero lost-time incidents on critical programmes.
+          <h2 className="text-3xl font-semibold text-neutral-900 text-balance">Quality & HSE</h2>
+          <p className="max-w-[72ch] break-normal text-neutral-600">
+            Quality assurance and health, safety, and environment (HSE) excellence are embedded from tender to handover. Our teams have been certified by some of the world&apos;s most demanding clients, maintaining zero lost-time incidents on critical programmes.
           </p>
           <div className="grid gap-6 md:grid-cols-3">
             {certifications.map((item) => (

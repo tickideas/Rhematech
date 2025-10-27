@@ -23,16 +23,14 @@ export default function Home() {
           priority
           className="-z-10 object-cover"
         />
-        <div className="absolute inset-0 -z-10 bg-[var(--rt-gradient-hero)]" />
-        <Container className="flex min-h-[520px] flex-col items-start justify-center gap-8 py-24 text-white">
-          <div className="space-y-6 max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] opacity-80">
-              Engineering • Construction • Project Management • Procurement
-            </p>
-            <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-neutral-900/85 via-neutral-900/70 to-neutral-900/60" />
+        <Container className="grid min-h-[520px] content-center gap-8 py-24 text-white md:grid-cols-12">
+          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7 xl:col-span-6">
+          
+            <h1 className="text-4xl font-extrabold leading-[1.1] text-balance md:text-5xl lg:text-6xl">
               Engineering, construction, and project management delivered with a specific solution.
             </h1>
-            <p className="text-lg text-neutral-100/90">
+            <p className="max-w-[68ch] break-normal text-lg text-neutral-100/90 md:max-w-[72ch]">
               From transport infrastructure to energy megaprojects, Rhematech blends global expertise with local insight to deliver safely, on schedule, and to the highest standards.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
@@ -42,7 +40,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <dl className="grid gap-6 text-xs uppercase tracking-[0.32em] text-neutral-100/70 sm:grid-cols-3">
+          <dl className="grid gap-6 text-xs uppercase tracking-[0.32em] text-neutral-100/70 sm:grid-cols-3 md:col-span-12">
             {keyMetrics.map((metric) => (
               <div key={metric.label} className="rounded-[var(--rt-radius-md)] border border-white/20 bg-white/5 px-4 py-3">
                 <dt className="text-3xl font-bold tracking-normal text-white">
@@ -82,14 +80,14 @@ export default function Home() {
       <section className="rt-section">
         <Container>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-xl space-y-4">
+            <div className="space-y-4">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-neutral-500">
                 What We Do
               </p>
-              <h2 className="text-3xl font-semibold text-neutral-900">
+              <h2 className="text-3xl font-semibold text-neutral-900 leading-tight text-balance">
                 Bespoke engineering and construction services aligned to your mission.
               </h2>
-              <p className="text-neutral-600">
+              <p className="max-w-[65ch] break-normal text-neutral-600 leading-relaxed">
                 Our multidisciplinary teams work as equal partners from feasibility through commissioning, ensuring every project reaches its full potential.
               </p>
             </div>
@@ -144,7 +142,7 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-neutral-500">
                 Featured Work
               </p>
-              <h2 className="text-3xl font-semibold text-neutral-900">
+              <h2 className="text-3xl font-semibold text-neutral-900 leading-tight text-balance">
                 Projects that reactivate economies and elevate communities.
               </h2>
             </div>
@@ -205,7 +203,7 @@ export default function Home() {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-neutral-500">
               Why Rhematech
             </p>
-            <h2 className="text-3xl font-semibold text-neutral-900">
+            <h2 className="text-3xl font-semibold text-neutral-900 leading-tight text-balance">
               A partner obsessed with results, safety, and enduring impact.
             </h2>
             <div className="grid gap-6 sm:grid-cols-2">
@@ -215,7 +213,7 @@ export default function Home() {
                     <span className="text-base font-semibold">{item.icon.toUpperCase()}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-neutral-900">{item.title}</h3>
-                  <p className="text-sm text-neutral-600">{item.description}</p>
+                  <p className="text-sm text-neutral-600 leading-relaxed">{item.description}</p>
                 </article>
               ))}
             </div>
@@ -246,13 +244,13 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="rt-section bg-neutral-900 text-white">
+      <section className="rt-section bg-[var(--rt-color-primary-600)] text-white">
         <Container className="grid gap-10 lg:grid-cols-[2fr_1fr]">
           <blockquote className="space-y-4">
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-white/60">
               Our Promise
             </p>
-            <p className="font-script text-3xl text-white/90">“A Specific Solution.”</p>
+            <p className="font-script text-3xl text-white/90">&quot;A Specific Solution.&quot;</p>
             <p className="text-xl leading-relaxed text-white/90">{testimonial.quote}</p>
             <footer className="text-sm uppercase tracking-[0.3em] text-white/60">
               {testimonial.author}

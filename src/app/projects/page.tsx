@@ -23,16 +23,18 @@ export default function ProjectsPage() {
           className="-z-10 object-cover"
         />
         <div className="absolute inset-0 -z-10 bg-neutral-900/75" />
-        <Container className="space-y-6 py-24 text-white">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-            Projects
-          </p>
-          <h1 className="text-4xl font-semibold md:text-5xl">
-            A portfolio of engineering excellence across sectors and continents.
-          </h1>
-          <p className="max-w-3xl text-lg text-white/80">
-            Explore a selection of programmes delivered by Rhematech’s multidisciplinary teams—from Crossrail’s transformational upgrades to resilient infrastructure across Nigeria.
-          </p>
+        <Container className="grid gap-6 py-24 text-white md:grid-cols-12">
+          <div className="w-full space-y-6 md:col-span-8 lg:col-span-7 xl:col-span-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
+              Projects
+            </p>
+            <h1 className="text-4xl font-semibold text-balance md:text-5xl">
+              A portfolio of engineering excellence across sectors and continents.
+            </h1>
+            <p className="max-w-[68ch] break-normal text-lg text-white/80 md:max-w-[72ch]">
+              Explore a selection of programmes delivered by Rhematech’s multidisciplinary teams—from Crossrail’s transformational upgrades to resilient infrastructure across Nigeria.
+            </p>
+          </div>
         </Container>
       </section>
 

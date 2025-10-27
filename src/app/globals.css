@@ -124,6 +124,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Ensure normal word wrapping across browsers; prevent per-character breaks */
+p {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
 .font-script {
   font-family: var(--rt-font-script);
 }
