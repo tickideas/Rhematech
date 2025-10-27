@@ -49,7 +49,7 @@ export default function AboutPage() {
           fill
           className="-z-10 object-cover opacity-30"
         />
-        <div className="absolute inset-0 -z-10 bg-neutral-900/70" />
+        <div className="absolute inset-0 -z-10 bg-neutral-900/60" />
         <Container className="grid min-h-[360px] content-center gap-6 py-24 md:grid-cols-12">
           <div className="w-full space-y-6 md:col-span-10 lg:col-span-10 xl:col-span-9">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
