@@ -13,7 +13,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
   if (!service) return {};
 
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServiceDetail({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
 
   if (!service) {

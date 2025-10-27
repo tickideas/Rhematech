@@ -14,7 +14,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const project = projects.find((item) => item.slug === params.slug);
+  const { slug } = await params;
+  const project = projects.find((item) => item.slug === slug);
   if (!project) return {};
 
   return {
@@ -23,8 +24,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ProjectDetail({ params }: Props) {
-  const project = projects.find((item) => item.slug === params.slug);
+export default async function ProjectDetail({ params }: Props) {
+  const { slug } = await params;
+  const project = projects.find((item) => item.slug === slug);
 
   if (!project) {
     notFound();
